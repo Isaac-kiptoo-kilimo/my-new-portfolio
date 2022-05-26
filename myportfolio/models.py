@@ -13,11 +13,11 @@ class Editor(models.Model):
 
 class Project(models.Model):
     title=models.CharField(max_length=50)
-    description=models.CharField()
+    description=models.CharField(max_length=1000)
     date_posted=models.DateTimeField(auto_now_add=True)
     project_image=models.ImageField(upload_to='project/',null=True)
-    editor=models.ForeignKey(Editor,on_delete=models.CASCADE)
-    project_url=models.CharField()
+    editor=models.ForeignKey(Editor,on_delete=models.PROTECT)
+    project_url=models.CharField(max_length=200)
 
 
 
