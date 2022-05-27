@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#">Navbar</a>
+      <img src="static/images/logo2.png" class="img-responsive" alt="" style="height: 80px;width: 120px;"> 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
         <ul class="menu mx-auto">
             <li class="menu-item">
-              <a href="#home" class="nav-link">Home</a>
+              <a href="{% url 'Editor' %}" class="nav-link">Home</a>
             </li>
             <li class="menu-item">
-              <a href="#projects" class="nav-link">Projects</a>
+              <a href="{% url 'project' %}" class="nav-link">Projects</a>
             </li>
             <li class="menu-item">
               <a href="#about" class="nav-link">About me</a>

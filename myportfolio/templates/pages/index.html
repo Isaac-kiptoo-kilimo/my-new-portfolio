@@ -1,21 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <!-- Looping through news   -->
+    <!-- Looping through editors   -->
     {% for editor in editors %}
-    <div class="row">
-      <!-- displaying News articles -->
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 shadow mb-3">
-        <div class="row">
-          <img src="{{editor.prof_image.url}}" class="img-responsive" alt="" style="height: 80%;width: 40%;">
+    <div class="row hero">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  mb-3 ">
+        <h1 class="text-center" id="h2"> {{editor.firstname }} </h1>
+        <h1 class="text-center" id="h2"> {{editor.lastname }} </h1>
+        <p>I am a fullstack web developer,
+          App developer,
+          Project manager.</p> 
       </div>
-        <h2 class="text-center" id="h2"> {{editor.firstname }} </h2>
-        <p class="text-center" id="p"> {{ project.description }} </p>
-        <span class="mt-2" id="small">Editor: {{ project.editor }}</span>
-        <span class="float-right" id="right">Date of Publish: {{ project.date_posted }}</span>
-        
+      <div class="col-md-6">
+        <img src="{{editor.pro_image.url}}" class="img-responsive" alt="" >
       </div>
-      <!--Display news Article images  -->
+     
       
     </div>
     {% empty %}
@@ -28,7 +27,7 @@
       <!-- displaying News articles -->
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 shadow mb-3">
         <div class="row">
-          <img src="{{project.prof_image.url}}" class="img-responsive" alt="" style="height: 80%;width: 40%;">
+          <img src="{{project.project_image.url}}" class="img-responsive" alt="" style="height: 80%;width: 40%;">
       </div>
         <h2 class="text-center" id="h2"> {{project.title }} </h2>
         <p class="text-center" id="p"> {{ project.description }} </p>
@@ -36,10 +35,9 @@
         <span class="float-right" id="right">Date of Publish: {{ project.date_posted }}</span>
         
       </div>
-      <!--Display news Article images  -->
       
-    </div>
-   
+    </div> 
     {% endfor %}
+   
   </div>
 {% endblock %}
